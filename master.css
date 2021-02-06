@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #393939;
+    color: #FFFFFF;
+}
+html {
+    background-color: #000000;
+}
+
+.fieldhead {
+    margin-bottom: 0;
+}
+input[type=text] {
+    margin-top: 0;
+}
+
+.top {
+    background-color: #38686F;
+    height: 20px;
+    padding: 5px;
+}
+
+.generated {
+    height: calc(100vh - 30px); /* 30 cus of padding */
+    background-image: url("https://upload.livaco.dev/u/V24dyZlUu8.png");
+}
+
+.vgui-container {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    
+    background-color: rgba(126, 126, 126, 0.95);
+    border: 1px solid #666666;
+    
+    font-family: Tahoma, sans-serif;
+    font-size: 14px; 
+    font-weight: lighter;
+}
+.close {
+    text-align: right;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Gmod Ban Screen Generator</title>
+        
+        <link rel="stylesheet" href="master.css">
+    </head>
+    <body>
+        <div class="top">
+            <span>
+                Admin
+                <input type="text" id="admin" value="GayKid69">
+            </span>
+            
+            <span>
+                Reason
+                <input type="text" id="reason" value="Yer a fuckin minge mate.">
+            </span>
+            
+            <span>
+                Length
+                <input type="text" id="length" value="Permanent">
+            </span>
+            
+            <span>
+                Style
+                <select id="style">
+                    <option value="ulx">ULX</option>
+                    <option value="fadmin">FAdmin</option>
+                    <option value="xadmin">xAdmin (the good one)</option>
+                </select>
+            </span>
+            
+            <span>
+                <button onclick="doshit()">Ban</button>
+            </span>
+        </div>
+        
+        <div class="generated">
+            <div class="vgui-container">
+                <div class="close">
+                    x
+                </div>
+                <span id="text"></span>
+            </div>
+        </div>
+        
+        <script>
+        function doshit() {
+            var e = document.getElementById("style");
+            var style = e.value;
+            
+            var admin = document.getElementById("admin").value;
+            var reason = document.getElementById("reason").value;
+            var length = document.getElementById("length").value;
+            
+            if(style == "ulx") {
+                text.innerHTML = "Disconnect:<br />-------=====[ BANNED ] =====-------<br /><br />---= Reason =---<br />" + reason + "<br /><br />---= Time Left =---<br />" + length + "<br />.";
+            }
+            if(style == "fadmin") {
+                text.innerHTML = "Banned by " + admin + " for " + length + " (" + reason + ")";
+            }
+            if(style == "xadmin") {
+                text.innerHTML = "---------------<br />-- Banned --<br />Banned by: " + admin + "<br />Time left: " + length + "<br />Reason: " + reason + "<br />Feel you were false banned? Appeal it on the forums<br />---------------";
+            }
+        }
+        </script>
+    </body>
+</html>
